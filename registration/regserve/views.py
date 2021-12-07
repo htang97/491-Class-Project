@@ -1,6 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-# Create your views here.
+from .serializers import *
+from rest_framework import generics
 
 def index(request):
-    return HttpResponse("Hello world from django backend");
+    return HttpResponse("Hello world from django backend")
+
+class StudentListView(generics.ListCreateAPIView):
+    student_list = Student.objects.all()
+    serializer_class = StudentSerializer
