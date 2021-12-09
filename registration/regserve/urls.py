@@ -6,5 +6,5 @@ application = 'regserve'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('/data/students/', views.StudentListView.as_view(), name = 'api_students'),
+    path('data/students/', views.StudentListView.as_view(), name = 'api_students'),
 ]

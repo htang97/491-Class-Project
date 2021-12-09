@@ -7,5 +7,5 @@ def index(request):
     return HttpResponse("Hello world from django backend")
 
 class StudentListView(generics.ListCreateAPIView):
-    student_list = Student.objects.all()
+    queryset = Student.objects.all()
     serializer_class = StudentSerializer

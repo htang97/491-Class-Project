@@ -21,7 +21,7 @@ class Person(models.Model):
     def __str__(self):
         return f'ID: {self.id}: name: {self.full_name}, studet id: {self.idnumber}, email: {self.email}, date created: {self.datecreated}, date modified: {self.datemodified}'
 
-class Student(models.Model):
+class Student(Person):
     YEAR_IN_SCHOOL = [
         ('FR', 'Freshman'),
         ('SO', 'Sophomore'),
