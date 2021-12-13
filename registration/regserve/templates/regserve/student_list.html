@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Student List </title>
+    <body>
+        <h1>Student List</h1>
+        <div id="select_div">
+            <select id="student_select">
+                {% for student in object_list  %}
+                    <option value="{{ student.id }}">
+                        {{ student.idnumber}}: {{ student.full_name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+    </body>
+    </head>
+</html>

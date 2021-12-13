@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Student List </title>
+    <body>
+        <h1>Student List</h1>
+        <div id="select_div">
+            <select id="student_select">
+                {% for student in object_list  %}
+                    <option value="{{ student.id }}">
+                        {{ student.idnumber}}: {{ student.full_name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div id="form_div">
+            <form id="student_form" method="POST">
+                {$ csrf_token $}
+                {{ form.as_p }}
+                <input type="submit" id="submit_input" value="Save">
+            </form>
+        </div>
+    </body>
+    </head>
+</html>

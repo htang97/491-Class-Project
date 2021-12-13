@@ -1,0 +1,165 @@
+2021-12-12 19:58:48,438 - tests.py[line:95] - INFO: Inside test student: student is StudentID: 1: ID: 1: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 03:58:48.435503+00:00, date modified: 2021-12-13 03:58:48.435503+00:00 - year in school: FR, major: CS, gpa: 4.0
+2021-12-12 19:58:48,473 - log.py[line:224] - WARNING: Not Found: /regserve/data/students/
+2021-12-12 19:58:48,474 - tests.py[line:62] - INFO: 
+TEST_STUDENT_API: api response is: <HttpResponseNotFound status_code=404, "text/html"> and the status is 404
+2021-12-12 20:21:29,453 - tests.py[line:95] - INFO: Inside test student: student is StudentID: 1: ID: 1: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:21:29.451558+00:00, date modified: 2021-12-13 04:21:29.451558+00:00 - year in school: FR, major: CS, gpa: 4.0
+2021-12-12 20:21:29,487 - log.py[line:224] - WARNING: Not Found: /regserve/data/students/
+2021-12-12 20:21:29,487 - tests.py[line:62] - INFO: 
+TEST_STUDENT_API: api response is: <HttpResponseNotFound status_code=404, "text/html"> and the status is 404
+2021-12-12 20:26:36,721 - tests.py[line:95] - INFO: Inside test student: student is StudentID: 1: ID: 1: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:26:36.719545+00:00, date modified: 2021-12-13 04:26:36.719545+00:00 - year in school: FR, major: CS, gpa: 4.0
+2021-12-12 20:26:36,744 - log.py[line:224] - WARNING: Not Found: /regserve/data/students/
+2021-12-12 20:26:36,744 - tests.py[line:62] - INFO: 
+TEST_STUDENT_API: api response is: <HttpResponseNotFound status_code=404, "text/html"> and the status is 404
+2021-12-12 20:29:30,923 - tests.py[line:95] - INFO: Inside test student: student is StudentID: 1: ID: 1: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:29:30.920653+00:00, date modified: 2021-12-13 04:29:30.920653+00:00 - year in school: FR, major: CS, gpa: 4.0
+2021-12-12 20:29:30,939 - tests.py[line:62] - INFO: 
+TEST_STUDENT_API: api response is: <Response status_code=200, "application/json"> and the status is 200
+2021-12-12 20:29:30,940 - tests.py[line:65] - INFO: 
+TEST_STUDENT_API: api response content is: b'[{"id":3,"firstname":"First","lastname":"Student","idnumber":100,"email":"first@student.edu","schoolyear":"FR","major":"CS","gpa":4.0,"datecreated":"2021-12-13T04:29:30.926224Z","datemodified":"2021-12-13T04:29:30.926224Z"},{"id":4,"firstname":"Second","lastname":"Student","idnumber":101,"email":"second@student.edu","schoolyear":"SR","major":"ENG","gpa":2.0,"datecreated":"2021-12-13T04:29:30.926224Z","datemodified":"2021-12-13T04:29:30.926224Z"}]'
+2021-12-12 20:29:30,940 - tests.py[line:68] - INFO: 
+TEST_STUDENT_API: api response content is: <_io.BytesIO object at 0x00000198C05A3A10>
+2021-12-12 20:29:30,940 - tests.py[line:73] - INFO: 
+TEST_STUDENT_API: api response data is: [{'id': 3, 'firstname': 'First', 'lastname': 'Student', 'idnumber': 100, 'email': 'first@student.edu', 'schoolyear': 'FR', 'major': 'CS', 'gpa': 4.0, 'datecreated': '2021-12-13T04:29:30.926224Z', 'datemodified': '2021-12-13T04:29:30.926224Z'}, {'id': 4, 'firstname': 'Second', 'lastname': 'Student', 'idnumber': 101, 'email': 'second@student.edu', 'schoolyear': 'SR', 'major': 'ENG', 'gpa': 2.0, 'datecreated': '2021-12-13T04:29:30.926224Z', 'datemodified': '2021-12-13T04:29:30.926224Z'}] and its id is 3
+2021-12-12 20:29:30,941 - tests.py[line:76] - INFO: 
+TEST_STUDENT_API: api response student object from DB is: StudentID: 3: ID: 3: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:29:30.926224+00:00, date modified: 2021-12-13 04:29:30.926224+00:00 - year in school: FR, major: CS, gpa: 4.0
+2021-12-12 20:29:30,941 - tests.py[line:79] - INFO: 
+TEST_STUDENT_API: api response student serializer is : StudentSerializer(<Student: StudentID: 3: ID: 3: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:29:30.926224+00:00, date modified: 2021-12-13 04:29:30.926224+00:00 - year in school: FR, major: CS, gpa: 4.0>, data={'id': 3, 'firstname': 'First', 'lastname': 'Student', 'idnumber': 100, 'email': 'first@student.edu', 'schoolyear': 'FR', 'major': 'CS', 'gpa': 4.0, 'datecreated': '2021-12-13T04:29:30.926224Z', 'datemodified': '2021-12-13T04:29:30.926224Z'}):
+    id = IntegerField(label='ID', read_only=True)
+    firstname = CharField(max_length=50)
+    lastname = CharField(max_length=50)
+    idnumber = IntegerField(max_value=9223372036854775807, min_value=0)
+    email = EmailField(allow_blank=True, max_length=254, required=False)
+    schoolyear = ChoiceField(choices=[('FR', 'Freshman'), ('SO', 'Sophomore'), ('JR', 'Junior'), ('SR', 'Senior'), ('GR', 'Graduate')])
+    major = ChoiceField(choices=[('CS', 'Computer Science'), ('ENG', 'Engineering'), ('BUS', 'Business'), ('SC', 'Science'), ('LAW', 'Law'), ('NUR', 'Nursing')])
+    gpa = FloatField(required=False)
+    datecreated = DateTimeField(read_only=True)
+    datemodified = DateTimeField(read_only=True)
+2021-12-12 20:29:30,943 - tests.py[line:80] - INFO: 
+TEST_STUDENT_API: api response student serializer validity is : True
+2021-12-12 20:29:30,943 - tests.py[line:81] - INFO: 
+TEST_STUDENT_API: api response student serializer validity is : OrderedDict([('firstname', 'First'), ('lastname', 'Student'), ('idnumber', 100), ('email', 'first@student.edu'), ('schoolyear', 'FR'), ('major', 'CS'), ('gpa', 4.0)])
+2021-12-12 20:29:30,944 - tests.py[line:84] - INFO: 
+TEST_STUDENT_API: api response student api object is : StudentID: 3: ID: 3: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:29:30.926224+00:00, date modified: 2021-12-13 04:29:30.943180+00:00 - year in school: FR, major: CS, gpa: 4.0
+2021-12-12 20:29:52,624 - tests.py[line:95] - INFO: Inside test student: student is StudentID: 1: ID: 1: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:29:52.621999+00:00, date modified: 2021-12-13 04:29:52.621999+00:00 - year in school: FR, major: CS, gpa: 4.0
+2021-12-12 20:29:52,640 - tests.py[line:62] - INFO: 
+TEST_STUDENT_API: api response is: <Response status_code=200, "application/json"> and the status is 200
+2021-12-12 20:29:52,641 - tests.py[line:65] - INFO: 
+TEST_STUDENT_API: api response content is: b'[{"id":3,"firstname":"First","lastname":"Student","idnumber":100,"email":"first@student.edu","schoolyear":"FR","major":"CS","gpa":4.0,"datecreated":"2021-12-13T04:29:52.627984Z","datemodified":"2021-12-13T04:29:52.627984Z"},{"id":4,"firstname":"Second","lastname":"Student","idnumber":101,"email":"second@student.edu","schoolyear":"SR","major":"ENG","gpa":2.0,"datecreated":"2021-12-13T04:29:52.627984Z","datemodified":"2021-12-13T04:29:52.627984Z"}]'
+2021-12-12 20:29:52,641 - tests.py[line:68] - INFO: 
+TEST_STUDENT_API: api response content is: <_io.BytesIO object at 0x00000240CF9EFC40>
+2021-12-12 20:29:52,641 - tests.py[line:73] - INFO: 
+TEST_STUDENT_API: api response data is: [{'id': 3, 'firstname': 'First', 'lastname': 'Student', 'idnumber': 100, 'email': 'first@student.edu', 'schoolyear': 'FR', 'major': 'CS', 'gpa': 4.0, 'datecreated': '2021-12-13T04:29:52.627984Z', 'datemodified': '2021-12-13T04:29:52.627984Z'}, {'id': 4, 'firstname': 'Second', 'lastname': 'Student', 'idnumber': 101, 'email': 'second@student.edu', 'schoolyear': 'SR', 'major': 'ENG', 'gpa': 2.0, 'datecreated': '2021-12-13T04:29:52.627984Z', 'datemodified': '2021-12-13T04:29:52.627984Z'}] and its id is 3
+2021-12-12 20:29:52,642 - tests.py[line:76] - INFO: 
+TEST_STUDENT_API: api response student object from DB is: StudentID: 3: ID: 3: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:29:52.627984+00:00, date modified: 2021-12-13 04:29:52.627984+00:00 - year in school: FR, major: CS, gpa: 4.0
+2021-12-12 20:29:52,643 - tests.py[line:79] - INFO: 
+TEST_STUDENT_API: api response student serializer is : StudentSerializer(<Student: StudentID: 3: ID: 3: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:29:52.627984+00:00, date modified: 2021-12-13 04:29:52.627984+00:00 - year in school: FR, major: CS, gpa: 4.0>, data={'id': 3, 'firstname': 'First', 'lastname': 'Student', 'idnumber': 100, 'email': 'first@student.edu', 'schoolyear': 'FR', 'major': 'CS', 'gpa': 4.0, 'datecreated': '2021-12-13T04:29:52.627984Z', 'datemodified': '2021-12-13T04:29:52.627984Z'}):
+    id = IntegerField(label='ID', read_only=True)
+    firstname = CharField(max_length=50)
+    lastname = CharField(max_length=50)
+    idnumber = IntegerField(max_value=9223372036854775807, min_value=0)
+    email = EmailField(allow_blank=True, max_length=254, required=False)
+    schoolyear = ChoiceField(choices=[('FR', 'Freshman'), ('SO', 'Sophomore'), ('JR', 'Junior'), ('SR', 'Senior'), ('GR', 'Graduate')])
+    major = ChoiceField(choices=[('CS', 'Computer Science'), ('ENG', 'Engineering'), ('BUS', 'Business'), ('SC', 'Science'), ('LAW', 'Law'), ('NUR', 'Nursing')])
+    gpa = FloatField(required=False)
+    datecreated = DateTimeField(read_only=True)
+    datemodified = DateTimeField(read_only=True)
+2021-12-12 20:29:52,644 - tests.py[line:80] - INFO: 
+TEST_STUDENT_API: api response student serializer validity is : True
+2021-12-12 20:29:52,644 - tests.py[line:81] - INFO: 
+TEST_STUDENT_API: api response student serializer validity is : OrderedDict([('firstname', 'First'), ('lastname', 'Student'), ('idnumber', 100), ('email', 'first@student.edu'), ('schoolyear', 'FR'), ('major', 'CS'), ('gpa', 4.0)])
+2021-12-12 20:29:52,646 - tests.py[line:84] - INFO: 
+TEST_STUDENT_API: api response student api object is : StudentID: 3: ID: 3: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:29:52.627984+00:00, date modified: 2021-12-13 04:29:52.645972+00:00 - year in school: FR, major: CS, gpa: 4.0
+2021-12-12 20:30:54,830 - tests.py[line:95] - INFO: Inside test student: student is StudentID: 1: ID: 1: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:30:54.828890+00:00, date modified: 2021-12-13 04:30:54.828890+00:00 - year in school: FR, major: CS, gpa: 4.0
+2021-12-12 20:30:54,846 - tests.py[line:62] - INFO: 
+TEST_STUDENT_API: api response is: <Response status_code=200, "application/json"> and the status is 200
+2021-12-12 20:30:54,846 - tests.py[line:65] - INFO: 
+TEST_STUDENT_API: api response content is: b'[{"id":3,"firstname":"First","lastname":"Student","idnumber":100,"email":"first@student.edu","schoolyear":"FR","major":"CS","gpa":4.0,"datecreated":"2021-12-13T04:30:54.833912Z","datemodified":"2021-12-13T04:30:54.833912Z"},{"id":4,"firstname":"Second","lastname":"Student","idnumber":101,"email":"second@student.edu","schoolyear":"SR","major":"ENG","gpa":2.0,"datecreated":"2021-12-13T04:30:54.833912Z","datemodified":"2021-12-13T04:30:54.833912Z"}]'
+2021-12-12 20:30:54,846 - tests.py[line:68] - INFO: 
+TEST_STUDENT_API: api response content is: <_io.BytesIO object at 0x00000123FF365E40>
+2021-12-12 20:30:54,846 - tests.py[line:73] - INFO: 
+TEST_STUDENT_API: api response data is: [{'id': 3, 'firstname': 'First', 'lastname': 'Student', 'idnumber': 100, 'email': 'first@student.edu', 'schoolyear': 'FR', 'major': 'CS', 'gpa': 4.0, 'datecreated': '2021-12-13T04:30:54.833912Z', 'datemodified': '2021-12-13T04:30:54.833912Z'}, {'id': 4, 'firstname': 'Second', 'lastname': 'Student', 'idnumber': 101, 'email': 'second@student.edu', 'schoolyear': 'SR', 'major': 'ENG', 'gpa': 2.0, 'datecreated': '2021-12-13T04:30:54.833912Z', 'datemodified': '2021-12-13T04:30:54.833912Z'}] and its id is 3
+2021-12-12 20:30:54,847 - tests.py[line:76] - INFO: 
+TEST_STUDENT_API: api response student object from DB is: StudentID: 3: ID: 3: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:30:54.833912+00:00, date modified: 2021-12-13 04:30:54.833912+00:00 - year in school: FR, major: CS, gpa: 4.0
+2021-12-12 20:30:54,848 - tests.py[line:79] - INFO: 
+TEST_STUDENT_API: api response student serializer is : StudentSerializer(<Student: StudentID: 3: ID: 3: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:30:54.833912+00:00, date modified: 2021-12-13 04:30:54.833912+00:00 - year in school: FR, major: CS, gpa: 4.0>, data={'id': 3, 'firstname': 'First', 'lastname': 'Student', 'idnumber': 100, 'email': 'first@student.edu', 'schoolyear': 'FR', 'major': 'CS', 'gpa': 4.0, 'datecreated': '2021-12-13T04:30:54.833912Z', 'datemodified': '2021-12-13T04:30:54.833912Z'}):
+    id = IntegerField(label='ID', read_only=True)
+    firstname = CharField(max_length=50)
+    lastname = CharField(max_length=50)
+    idnumber = IntegerField(max_value=9223372036854775807, min_value=0)
+    email = EmailField(allow_blank=True, max_length=254, required=False)
+    schoolyear = ChoiceField(choices=[('FR', 'Freshman'), ('SO', 'Sophomore'), ('JR', 'Junior'), ('SR', 'Senior'), ('GR', 'Graduate')])
+    major = ChoiceField(choices=[('CS', 'Computer Science'), ('ENG', 'Engineering'), ('BUS', 'Business'), ('SC', 'Science'), ('LAW', 'Law'), ('NUR', 'Nursing')])
+    gpa = FloatField(required=False)
+    datecreated = DateTimeField(read_only=True)
+    datemodified = DateTimeField(read_only=True)
+2021-12-12 20:30:54,850 - tests.py[line:80] - INFO: 
+TEST_STUDENT_API: api response student serializer validity is : True
+2021-12-12 20:30:54,850 - tests.py[line:81] - INFO: 
+TEST_STUDENT_API: api response student serializer validity is : OrderedDict([('firstname', 'First'), ('lastname', 'Student'), ('idnumber', 100), ('email', 'first@student.edu'), ('schoolyear', 'FR'), ('major', 'CS'), ('gpa', 4.0)])
+2021-12-12 20:30:54,850 - tests.py[line:84] - INFO: 
+TEST_STUDENT_API: api response student api object is : StudentID: 3: ID: 3: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:30:54.833912+00:00, date modified: 2021-12-13 04:30:54.850975+00:00 - year in school: FR, major: CS, gpa: 4.0
+2021-12-12 20:37:07,257 - tests.py[line:95] - INFO: Inside test student: student is StudentID: 1: ID: 1: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:37:07.255513+00:00, date modified: 2021-12-13 04:37:07.255513+00:00 - year in school: FR, major: CS, gpa: 4.0
+2021-12-12 20:37:07,277 - log.py[line:224] - WARNING: Not Found: /regserve/data/students/
+2021-12-12 20:37:07,278 - tests.py[line:62] - INFO: 
+TEST_STUDENT_API: api response is: <HttpResponseNotFound status_code=404, "text/html"> and the status is 404
+2021-12-12 20:37:31,079 - tests.py[line:95] - INFO: Inside test student: student is StudentID: 1: ID: 1: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:37:31.077247+00:00, date modified: 2021-12-13 04:37:31.077247+00:00 - year in school: FR, major: CS, gpa: 4.0
+2021-12-12 20:37:31,101 - log.py[line:224] - WARNING: Not Found: /regserve/data/students/
+2021-12-12 20:37:31,101 - tests.py[line:62] - INFO: 
+TEST_STUDENT_API: api response is: <HttpResponseNotFound status_code=404, "text/html"> and the status is 404
+2021-12-12 20:37:45,426 - tests.py[line:95] - INFO: Inside test student: student is StudentID: 1: ID: 1: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:37:45.424452+00:00, date modified: 2021-12-13 04:37:45.424452+00:00 - year in school: FR, major: CS, gpa: 4.0
+2021-12-12 20:37:45,442 - tests.py[line:62] - INFO: 
+TEST_STUDENT_API: api response is: <Response status_code=200, "application/json"> and the status is 200
+2021-12-12 20:37:45,442 - tests.py[line:65] - INFO: 
+TEST_STUDENT_API: api response content is: b'[{"id":3,"firstname":"First","lastname":"Student","idnumber":100,"email":"first@student.edu","schoolyear":"FR","major":"CS","gpa":4.0,"datecreated":"2021-12-13T04:37:45.430460Z","datemodified":"2021-12-13T04:37:45.430460Z"},{"id":4,"firstname":"Second","lastname":"Student","idnumber":101,"email":"second@student.edu","schoolyear":"SR","major":"ENG","gpa":2.0,"datecreated":"2021-12-13T04:37:45.430460Z","datemodified":"2021-12-13T04:37:45.430460Z"}]'
+2021-12-12 20:37:45,442 - tests.py[line:68] - INFO: 
+TEST_STUDENT_API: api response content is: <_io.BytesIO object at 0x0000012D94AF5440>
+2021-12-12 20:37:45,442 - tests.py[line:73] - INFO: 
+TEST_STUDENT_API: api response data is: [{'id': 3, 'firstname': 'First', 'lastname': 'Student', 'idnumber': 100, 'email': 'first@student.edu', 'schoolyear': 'FR', 'major': 'CS', 'gpa': 4.0, 'datecreated': '2021-12-13T04:37:45.430460Z', 'datemodified': '2021-12-13T04:37:45.430460Z'}, {'id': 4, 'firstname': 'Second', 'lastname': 'Student', 'idnumber': 101, 'email': 'second@student.edu', 'schoolyear': 'SR', 'major': 'ENG', 'gpa': 2.0, 'datecreated': '2021-12-13T04:37:45.430460Z', 'datemodified': '2021-12-13T04:37:45.430460Z'}] and its id is 3
+2021-12-12 20:37:45,443 - tests.py[line:76] - INFO: 
+TEST_STUDENT_API: api response student object from DB is: StudentID: 3: ID: 3: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:37:45.430460+00:00, date modified: 2021-12-13 04:37:45.430460+00:00 - year in school: FR, major: CS, gpa: 4.0
+2021-12-12 20:37:45,443 - tests.py[line:79] - INFO: 
+TEST_STUDENT_API: api response student serializer is : StudentSerializer(<Student: StudentID: 3: ID: 3: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:37:45.430460+00:00, date modified: 2021-12-13 04:37:45.430460+00:00 - year in school: FR, major: CS, gpa: 4.0>, data={'id': 3, 'firstname': 'First', 'lastname': 'Student', 'idnumber': 100, 'email': 'first@student.edu', 'schoolyear': 'FR', 'major': 'CS', 'gpa': 4.0, 'datecreated': '2021-12-13T04:37:45.430460Z', 'datemodified': '2021-12-13T04:37:45.430460Z'}):
+    id = IntegerField(label='ID', read_only=True)
+    firstname = CharField(max_length=50)
+    lastname = CharField(max_length=50)
+    idnumber = IntegerField(max_value=9223372036854775807, min_value=0)
+    email = EmailField(allow_blank=True, max_length=254, required=False)
+    schoolyear = ChoiceField(choices=[('FR', 'Freshman'), ('SO', 'Sophomore'), ('JR', 'Junior'), ('SR', 'Senior'), ('GR', 'Graduate')])
+    major = ChoiceField(choices=[('CS', 'Computer Science'), ('ENG', 'Engineering'), ('BUS', 'Business'), ('SC', 'Science'), ('LAW', 'Law'), ('NUR', 'Nursing')])
+    gpa = FloatField(required=False)
+    datecreated = DateTimeField(read_only=True)
+    datemodified = DateTimeField(read_only=True)
+2021-12-12 20:37:45,445 - tests.py[line:80] - INFO: 
+TEST_STUDENT_API: api response student serializer validity is : True
+2021-12-12 20:37:45,445 - tests.py[line:81] - INFO: 
+TEST_STUDENT_API: api response student serializer validity is : OrderedDict([('firstname', 'First'), ('lastname', 'Student'), ('idnumber', 100), ('email', 'first@student.edu'), ('schoolyear', 'FR'), ('major', 'CS'), ('gpa', 4.0)])
+2021-12-12 20:37:45,446 - tests.py[line:84] - INFO: 
+TEST_STUDENT_API: api response student api object is : StudentID: 3: ID: 3: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:37:45.430460+00:00, date modified: 2021-12-13 04:37:45.445230+00:00 - year in school: FR, major: CS, gpa: 4.0
+2021-12-12 20:39:45,162 - tests.py[line:95] - INFO: Inside test student: student is StudentID: 1: ID: 1: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:39:45.160384+00:00, date modified: 2021-12-13 04:39:45.160384+00:00 - year in school: FR, major: CS, gpa: 4.0
+2021-12-12 20:39:45,175 - tests.py[line:62] - INFO: 
+TEST_STUDENT_API: api response is: <Response status_code=200, "application/json"> and the status is 200
+2021-12-12 20:39:45,175 - tests.py[line:65] - INFO: 
+TEST_STUDENT_API: api response content is: b'[{"id":3,"firstname":"First","lastname":"Student","idnumber":100,"email":"first@student.edu","schoolyear":"FR","major":"CS","gpa":4.0,"datecreated":"2021-12-13T04:39:45.164495Z","datemodified":"2021-12-13T04:39:45.164495Z"},{"id":4,"firstname":"Second","lastname":"Student","idnumber":101,"email":"second@student.edu","schoolyear":"SR","major":"ENG","gpa":2.0,"datecreated":"2021-12-13T04:39:45.165460Z","datemodified":"2021-12-13T04:39:45.165460Z"}]'
+2021-12-12 20:39:45,175 - tests.py[line:68] - INFO: 
+TEST_STUDENT_API: api response content is: <_io.BytesIO object at 0x0000021DCFF46F20>
+2021-12-12 20:39:45,175 - tests.py[line:73] - INFO: 
+TEST_STUDENT_API: api response data is: [{'id': 3, 'firstname': 'First', 'lastname': 'Student', 'idnumber': 100, 'email': 'first@student.edu', 'schoolyear': 'FR', 'major': 'CS', 'gpa': 4.0, 'datecreated': '2021-12-13T04:39:45.164495Z', 'datemodified': '2021-12-13T04:39:45.164495Z'}, {'id': 4, 'firstname': 'Second', 'lastname': 'Student', 'idnumber': 101, 'email': 'second@student.edu', 'schoolyear': 'SR', 'major': 'ENG', 'gpa': 2.0, 'datecreated': '2021-12-13T04:39:45.165460Z', 'datemodified': '2021-12-13T04:39:45.165460Z'}] and its id is 3
+2021-12-12 20:39:45,176 - tests.py[line:76] - INFO: 
+TEST_STUDENT_API: api response student object from DB is: StudentID: 3: ID: 3: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:39:45.164495+00:00, date modified: 2021-12-13 04:39:45.164495+00:00 - year in school: FR, major: CS, gpa: 4.0
+2021-12-12 20:39:45,177 - tests.py[line:79] - INFO: 
+TEST_STUDENT_API: api response student serializer is : StudentSerializer(<Student: StudentID: 3: ID: 3: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:39:45.164495+00:00, date modified: 2021-12-13 04:39:45.164495+00:00 - year in school: FR, major: CS, gpa: 4.0>, data={'id': 3, 'firstname': 'First', 'lastname': 'Student', 'idnumber': 100, 'email': 'first@student.edu', 'schoolyear': 'FR', 'major': 'CS', 'gpa': 4.0, 'datecreated': '2021-12-13T04:39:45.164495Z', 'datemodified': '2021-12-13T04:39:45.164495Z'}):
+    id = IntegerField(label='ID', read_only=True)
+    firstname = CharField(max_length=50)
+    lastname = CharField(max_length=50)
+    idnumber = IntegerField(max_value=9223372036854775807, min_value=0)
+    email = EmailField(allow_blank=True, max_length=254, required=False)
+    schoolyear = ChoiceField(choices=[('FR', 'Freshman'), ('SO', 'Sophomore'), ('JR', 'Junior'), ('SR', 'Senior'), ('GR', 'Graduate')])
+    major = ChoiceField(choices=[('CS', 'Computer Science'), ('ENG', 'Engineering'), ('BUS', 'Business'), ('SC', 'Science'), ('LAW', 'Law'), ('NUR', 'Nursing')])
+    gpa = FloatField(required=False)
+    datecreated = DateTimeField(read_only=True)
+    datemodified = DateTimeField(read_only=True)
+2021-12-12 20:39:45,178 - tests.py[line:80] - INFO: 
+TEST_STUDENT_API: api response student serializer validity is : True
+2021-12-12 20:39:45,178 - tests.py[line:81] - INFO: 
+TEST_STUDENT_API: api response student serializer validity is : OrderedDict([('firstname', 'First'), ('lastname', 'Student'), ('idnumber', 100), ('email', 'first@student.edu'), ('schoolyear', 'FR'), ('major', 'CS'), ('gpa', 4.0)])
+2021-12-12 20:39:45,179 - tests.py[line:84] - INFO: 
+TEST_STUDENT_API: api response student api object is : StudentID: 3: ID: 3: name: First Student, studet id: 100, email: first@student.edu, date created: 2021-12-13 04:39:45.164495+00:00, date modified: 2021-12-13 04:39:45.179833+00:00 - year in school: FR, major: CS, gpa: 4.0
